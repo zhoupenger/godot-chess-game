@@ -1,0 +1,13 @@
+prefix=/Users/syesw/anaconda3/envs/chess
+exec_prefix=/Users/syesw/anaconda3/envs/chess
+libdir=/Users/syesw/anaconda3/envs/chess/lib
+sharedlibdir=/Users/syesw/anaconda3/envs/chess/lib
+includedir=/Users/syesw/anaconda3/envs/chess/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

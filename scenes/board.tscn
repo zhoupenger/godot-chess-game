@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://du7lotd8qo77o"]
+
+[ext_resource type="Texture2D" uid="uid://bw48pra7un2g5" path="res://assets/boards/board_plain_05.png" id="1_wgx0q"]
+[ext_resource type="Script" path="res://scripts/board.gd" id="2_7r4qe"]
+[ext_resource type="AudioStream" uid="uid://bg0mye3jnpcjj" path="res://sounds/move-self.mp3" id="3_ljkv2"]
+
+[node name="Board" type="Sprite2D"]
+position = Vector2(64, -64)
+texture = ExtResource("1_wgx0q")
+script = ExtResource("2_7r4qe")
+
+[node name="Pieces" type="Node2D" parent="."]
+
+[node name="Dots" type="Node2D" parent="."]
+
+[node name="self_move_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ljkv2")
+volume_db = 8.0

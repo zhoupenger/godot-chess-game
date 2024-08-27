@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfbstreo4jspc"]
+
+[ext_resource type="PackedScene" uid="uid://du7lotd8qo77o" path="res://scenes/board.tscn" id="1_w6t0g"]
+[ext_resource type="PackedScene" uid="uid://c3ulxtuaqrqtd" path="res://scenes/mouse_cursor.tscn" id="1_xnqvc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uy4vr"]
+load_path = "res://.godot/imported/bg3.png-25ac3bd494550ffad24f71ea3f224de9.ctex"
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(61, -59)
+zoom = Vector2(5, 5)
+
+[node name="background" type="TextureRect" parent="Camera2D"]
+offset_left = -229.0
+offset_top = -143.0
+offset_right = -189.0
+offset_bottom = -103.0
+scale = Vector2(11.3076, 6.98421)
+texture = SubResource("CompressedTexture2D_uy4vr")
+
+[node name="mouse_cursor" parent="." instance=ExtResource("1_xnqvc")]
+z_index = 10
+
+[node name="Board" parent="." instance=ExtResource("1_w6t0g")]

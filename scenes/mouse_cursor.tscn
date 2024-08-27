@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3ulxtuaqrqtd"]
+
+[ext_resource type="Texture2D" uid="uid://c6ai73ghhrk70" path="res://assets/cursor.png" id="1_0pasy"]
+[ext_resource type="Script" path="res://scripts/mouse_cursor.gd" id="2_07akn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b68pe"]
+atlas = ExtResource("1_0pasy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcutm"]
+atlas = ExtResource("1_0pasy")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51di5"]
+atlas = ExtResource("1_0pasy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apnmq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b68pe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcutm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51di5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcutm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b68pe")
+}],
+"loop": false,
+"name": &"click",
+"speed": 10.0
+}]
+
+[node name="mouse_cursor" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_apnmq")
+animation = &"click"
+frame = 4
+frame_progress = 1.0
+script = ExtResource("2_07akn")
