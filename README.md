@@ -28,5 +28,8 @@ Dialogic.start("timeline") # start a demo dialog
 ```
 
 ## Visualization
-No you could take a look
+Now you could take a look  
+
+
+![visual](https://github.com/zhoupenger/godot-chess-game/blob/main/gisforvisual/visual.gif)
 
